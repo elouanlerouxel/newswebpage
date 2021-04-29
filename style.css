@@ -1,0 +1,389 @@
+/*
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto Slab', serif;
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: black;
+	list-style-type: none;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100vw;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+nav {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 30px;
+	margin-bottom: 7vh;
+}
+
+nav > ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 45%;
+	padding-right: 15px;
+}
+
+nav > ul > li > a {
+	font-size: 1.5em;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+}
+
+nav > ul > li {
+	padding: 2.1px 5px;
+	border: 3px solid white;
+}
+
+#art {
+	border-bottom-color: lightgrey;
+}
+#art:hover {
+	border-color: lightgrey;
+}
+#politics {
+	border-bottom-color: #0055A4;
+}
+#politics:hover {
+	border-color: #0055A4;
+}
+#music {
+	border-bottom-color: lightgrey;
+}
+#music:hover {
+	border-color: lightgrey;
+}
+#news {
+	border-bottom-color: #EF4135;
+}
+#news:hover {
+	border-color: #EF4135;
+}
+#science {
+	border-bottom-color: lightgrey;
+}
+#science:hover {
+	border-color: lightgrey;
+}
+
+h1 {
+	font-size: 2.1em;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+h1 > span {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	font-size: 0.6em;
+}
+
+main {
+	width: 80%;
+	display: grid;
+	grid-gap: calc(8%/3);
+	margin: auto;
+	grid-template-rows: auto; 
+	grid-template-columns: 23% 23% 23% 23%;
+	grid-template-areas:
+	'bigOne bigOne middleOne middleOne'
+	'bigOne bigOne middleTwo middleTwo'
+	'middleThree middleThree bigTwo bigTwo'
+	'middleFour middleFour bigTwo bigTwo'
+	'smallOne smallTwo smallThree smallFour'
+	'smallFive smallSix smallSeven smallEight';
+}
+
+#article1 {grid-area: bigOne;}
+
+#article2 {grid-area: middleOne;}
+
+#article3 {grid-area: middleTwo;}
+
+#article4 {grid-area: bigTwo;}
+
+#article5 {grid-area: middleThree;}
+
+#article6 {grid-area: middleFour;}
+
+#article7 {grid-area: smallOne;}
+
+#article8 {grid-area: smallTwo;}
+
+#article9 {grid-area: smallThree;}
+
+#article10 {grid-area: smallFour;}
+
+#article11 {grid-area: smallFive;}
+
+#article12 {grid-area: smallSix;}
+
+#article13 {grid-area: smallSeven;}
+
+#article14 {grid-area: smallEight;}
+
+/* GENERAL */
+
+.article > a {
+	display: block;
+}
+
+.article > a > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.article > div {
+	padding: 6px 10px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.politics > div {
+	border: 3px solid #0055A4;
+}
+
+.music > div, .art > div, .science > div {
+	border: 3px solid lightgrey;
+}
+
+.news > div {
+	border: 3px solid #EF4135;
+}
+
+.article > div > a {
+	display: block;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.article > div > p {
+	display: block;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.article > div > div {
+	display: block;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.category {
+	width: 100px;
+	text-align: center;
+	color: white;
+}
+
+.politics .category {
+	background-color: #0055A4;
+}
+
+.music .category, .art .category, .science .category {
+	background-color: lightgrey;
+	color: black;
+}
+
+.news .category {
+	background-color: #EF4135;
+}
+
+/* IMPORTANT */
+
+.big > a {
+	width: 100%;
+	height: 60%;
+}
+
+.big > div {
+	height: 40%;
+}
+
+.big > div > a {
+	font-size: 1.3em;
+}
+
+.big > div > p {
+	font-size: 1.3em;
+}
+
+.big > div, .small > div {
+	border-top: none;
+}
+
+.big .sign span {
+	display: inline-block;
+}
+
+.big .sign br, .middle .sign br {
+	display: none;
+}
+
+/* NORMAL NEWS */
+
+.middle {
+	display: flex;
+	font-size: 0.93em;
+}
+
+.middle > div {
+	height: 100%;
+	width: 60%;
+	border-left: none;
+}
+
+.middle > a {
+	width: 40%;
+	height: 100%;
+}
+
+.middle > div > a {
+	font-size: 1.15em;
+}
+
+.middle > div > p {
+	font-size: 1.15em;
+}
+
+/*.middle .sign br,*/ .small .sign br {
+	display: inline-block;
+}
+
+/*.middle .sign span,*/ .small .sign span {
+	display: none;
+}
+
+/*.middle .sign,*/ .small .sign {
+	text-align: center;
+}
+
+/* SMALL NEWS */
+
+.small {
+	font-size: .9em;
+}
+
+.small > div {
+
+}
+
+.small > a {
+	height: 55%;
+}
+
+@media only screen and (max-width: 1300px) {
+	.middle .sign br {
+		display: inline-block;
+	}
+
+	.middle .sign span {
+		display: none;
+	}
+
+	.middle .sign {
+		text-align: center;
+	}
+
+	nav {
+		font-size: 0.90em;
+	}
+
+	.big > div > a, .middle > div > a {
+		font-size: 1em;
+	}
+
+	.big > div > p, .middle > div > p {
+		font-size: 1em;
+	}
+
+}
+
+@media only screen and (max-width: 950px) {
+	.big .sign br {
+		display: inline-block;
+	}
+
+	.big .sign span {
+		display: none;
+	}
+
+	.big .sign {
+		text-align: center;
+	}
+
+	main {
+		grid-template-areas:
+			'bigOne bigOne middleOne middleOne'
+			'bigOne bigOne middleTwo middleTwo'
+			'middleThree middleThree bigTwo bigTwo'
+			'middleFour middleFour bigTwo bigTwo'
+			'smallOne smallOne smallTwo smallTwo'
+			'smallThree smallThree smallFour smallFour'
+			'smallFive smallFive smallSix smallSix'
+			'smallSeven smallSeven smallEight smallEight';
+	}
+
+	nav {
+		flex-direction: column;
+	}
+
+	nav > ul {
+		width: auto;
+		padding: 0px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	main {
+		grid-template-areas:
+			'bigOne bigOne bigOne bigOne'
+			'bigTwo bigTwo bigTwo bigTwo'
+			'middleOne middleOne middleOne middleOne'
+			'middleTwo middleTwo middleTwo middleTwo'
+			'middleThree middleThree middleThree middleThree'
+			'middleFour middleFour middleFour middleFour'
+			'smallOne smallOne smallOne smallOne'
+			'smallTwo smallTwo smallTwo smallTwo'
+			'smallThree smallThree smallThree smallThree'
+			'smallFour smallFour smallFour smallFour'
+			'smallFive smallFive smallFive smallFive'
+			'smallSix smallSix smallSix smallSix'
+			'smallSeven smallSeven smallSeven smallSeven'
+			'smallEight smallEight smallEight smallEight';
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	nav > h1 > span {
+		display: block;
+	}
+
+	nav > ul > li {
+		width: 33%;
+		font-size: 0.93em;
+		text-align: center;
+	}
+
+	nav > ul {
+		flex-wrap: wrap;
+	}
+}
